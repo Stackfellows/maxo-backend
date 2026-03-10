@@ -32,6 +32,10 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/users', userRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Backend API is running successfully 🚀");
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
     res.json({ success: true, message: 'Maxo API is running 🚀' });
