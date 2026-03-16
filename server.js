@@ -11,6 +11,8 @@ const productRoutes = require('./Routes/productRoutes');
 const orderRoutes = require('./Routes/orderRoutes');
 const adminRoutes = require('./Routes/adminRoutes');
 const userRoutes = require('./Routes/userRoutes');
+const offerRoutes = require('./Routes/offerRoutes');
+
 
 // Connect to MongoDB
 connectDB();
@@ -37,6 +39,8 @@ app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/offers', offerRoutes);
+
 
 app.get("/", (req, res) => {
     res.send("Backend API is running successfully 🚀");
