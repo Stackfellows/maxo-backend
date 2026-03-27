@@ -58,6 +58,10 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/offers', offerRoutes);
 
+// Base API route
+app.get('/api', (req, res) => {
+    res.json({ success: true, message: 'Maxo Backend API is running successfully 🚀' });
+});
 
 app.get("/", (req, res) => {
     res.send("Backend API is running successfully 🚀");
